@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <style>
+    div {
+      width: 600px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="col-lg-6">
+      <div class="row" id="galeri"></div>
+    </div>
+    <script>
+      function resim() {
+        for (let i = 0; i < 15; i++) {
+          let randomResim = `https://source.unsplash.com/random/200x200`;
+          document.getElementById(
+            "galeri"
+          ).innerHTML += `<div class="col-lg-4 bosluk"><img src='${randomResim}' /></div>`;
+        }
+      }
+      window.onload = resim;
+    </script>
+  </body>
+</html>
