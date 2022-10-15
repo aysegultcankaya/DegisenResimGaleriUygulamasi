@@ -18,16 +18,23 @@
     div {
       width: 600px;
       margin: auto;
+      padding: ;
+    }
+    h1 {
+      text-align: center;
     }
   </style>
   <body>
+    <h1>Resim Galerisi</h1>
     <div class="col-lg-6">
       <div class="row" id="galeri"></div>
     </div>
     <script>
       function resim() {
         for (let i = 0; i < 15; i++) {
-          let randomResim = `https://source.unsplash.com/random/200x200`;
+          let randomResim = `https://source.unsplash.com/random/200x200?sig=${
+            Math.random() * 100
+          }/`;
           document.getElementById(
             "galeri"
           ).innerHTML += `<div class="col-lg-4 bosluk"><img src='${randomResim}' /></div>`;
